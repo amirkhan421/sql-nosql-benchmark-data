@@ -1,6 +1,6 @@
 {
     "10k": {
-        "dataset": "/home/amir-khan-421/Research/db-benchmark/data/data_10k.csv",
+        "dataset": "/data/data_10k.csv",
         "iterations": 5,
         "write_latency_ms": {
             "mysql_write_ms": 832.416,
@@ -38,7 +38,7 @@
         }
     },
     "100k": {
-        "dataset": "/home/amir-khan-421/Research/db-benchmark/data/data_100k.csv",
+        "dataset": "/data/data_100k.csv",
         "iterations": 5,
         "write_latency_ms": {
             "mysql_write_ms": 3239.424,
@@ -76,7 +76,7 @@
         }
     },
     "1m": {
-        "dataset": "/home/amir-khan-421/Research/db-benchmark/data/data_1m.csv",
+        "dataset": "/data/data_1m.csv",
         "iterations": 5,
         "write_latency_ms": {
             "mysql_write_ms": 29617.741,
