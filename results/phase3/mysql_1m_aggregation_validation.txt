@@ -1,0 +1,42 @@
+============================================================
+MYSQL 1M AGGREGATION VALIDATION
+============================================================
+
+Checking current index state...
+  PRIMARY -> transaction_id
+  idx_user_id -> user_id
+  idx_category -> category
+
+Measuring INDEXED aggregation...
+
+INDEXED
+--------------------------------------------------
+Iteration 1: 747.597 ms
+Iteration 2: 727.779 ms
+Iteration 3: 737.165 ms
+Iteration 4: 755.808 ms
+Iteration 5: 706.933 ms
+Average : 735.056 ms
+Minimum : 706.933 ms
+Maximum : 755.808 ms
+
+Removing idx_category...
+Measuring UNINDEXED aggregation...
+
+UNINDEXED
+--------------------------------------------------
+Iteration 1: 627.607 ms
+Iteration 2: 586.224 ms
+Iteration 3: 594.961 ms
+Iteration 4: 588.218 ms
+Iteration 5: 607.028 ms
+Average : 600.808 ms
+Minimum : 586.224 ms
+Maximum : 627.607 ms
+
+Restoring idx_category...
+Index restored.
+
+============================================================
+VALIDATION COMPLETED
+============================================================

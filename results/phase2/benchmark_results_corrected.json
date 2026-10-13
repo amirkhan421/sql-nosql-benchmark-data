@@ -1,0 +1,116 @@
+{
+    "10k": {
+        "dataset": "/home/amir-khan-421/Research/db-benchmark/data/data_10k.csv",
+        "iterations": 5,
+        "write_latency_ms": {
+            "mysql_write_ms": 832.416,
+            "mongo_write_ms": 429.521
+        },
+        "unindexed": {
+            "point_lookup": {
+                "mysql": 9.962,
+                "mongo": 11.806
+            },
+            "aggregation": {
+                "mysql": 9.903,
+                "mongo": 20.231
+            }
+        },
+        "indexed": {
+            "point_lookup": {
+                "mysql": 0.891,
+                "mongo": 1.574
+            },
+            "aggregation": {
+                "mysql": 7.468,
+                "mongo": 6.533
+            }
+        },
+        "warm_cache": {
+            "point_lookup": {
+                "mysql": 0.671,
+                "mongo": 0.812
+            },
+            "aggregation": {
+                "mysql": 5.777,
+                "mongo": 4.915
+            }
+        }
+    },
+    "100k": {
+        "dataset": "/home/amir-khan-421/Research/db-benchmark/data/data_100k.csv",
+        "iterations": 5,
+        "write_latency_ms": {
+            "mysql_write_ms": 3239.424,
+            "mongo_write_ms": 1082.221
+        },
+        "unindexed": {
+            "point_lookup": {
+                "mysql": 55.262,
+                "mongo": 48.104
+            },
+            "aggregation": {
+                "mysql": 59.744,
+                "mongo": 50.668
+            }
+        },
+        "indexed": {
+            "point_lookup": {
+                "mysql": 0.725,
+                "mongo": 1.119
+            },
+            "aggregation": {
+                "mysql": 58.983,
+                "mongo": 30.494
+            }
+        },
+        "warm_cache": {
+            "point_lookup": {
+                "mysql": 0.738,
+                "mongo": 0.908
+            },
+            "aggregation": {
+                "mysql": 46.334,
+                "mongo": 32.408
+            }
+        }
+    },
+    "1m": {
+        "dataset": "/home/amir-khan-421/Research/db-benchmark/data/data_1m.csv",
+        "iterations": 5,
+        "write_latency_ms": {
+            "mysql_write_ms": 29617.741,
+            "mongo_write_ms": 12547.836
+        },
+        "unindexed": {
+            "point_lookup": {
+                "mysql": 540.517,
+                "mongo": 518.589
+            },
+            "aggregation": {
+                "mysql": 704.294,
+                "mongo": 590.154
+            }
+        },
+        "indexed": {
+            "point_lookup": {
+                "mysql": 1.192,
+                "mongo": 1.984
+            },
+            "aggregation": {
+                "mysql": 1069.269,
+                "mongo": 304.607
+            }
+        },
+        "warm_cache": {
+            "point_lookup": {
+                "mysql": 1.137,
+                "mongo": 1.214
+            },
+            "aggregation": {
+                "mysql": 733.467,
+                "mongo": 304.103
+            }
+        }
+    }
+}

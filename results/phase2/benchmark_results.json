@@ -1,0 +1,86 @@
+{
+    "10k": {
+        "dataset": "/home/amir-khan-421/Research/db-benchmark/data/data_10k.csv",
+        "iterations": 5,
+        "write_latency_ms": {
+            "mysql_write_ms": 1171.34,
+            "mongo_write_ms": 211.033
+        },
+        "unindexed": {
+            "point_lookup": {
+                "mysql": 7.478,
+                "mongo": 6.653
+            },
+            "aggregation": {
+                "mysql": 8.192,
+                "mongo": 13.592
+            }
+        },
+        "indexed": {
+            "point_lookup": {
+                "mysql": 1.362,
+                "mongo": 2.25
+            },
+            "aggregation": {
+                "mysql": 14.762,
+                "mongo": 9.396
+            }
+        }
+    },
+    "100k": {
+        "dataset": "/home/amir-khan-421/Research/db-benchmark/data/data_100k.csv",
+        "iterations": 5,
+        "write_latency_ms": {
+            "mysql_write_ms": 3565.828,
+            "mongo_write_ms": 1168.604
+        },
+        "unindexed": {
+            "point_lookup": {
+                "mysql": 53.896,
+                "mongo": 48.368
+            },
+            "aggregation": {
+                "mysql": 61.268,
+                "mongo": 51.668
+            }
+        },
+        "indexed": {
+            "point_lookup": {
+                "mysql": 0.8,
+                "mongo": 1.369
+            },
+            "aggregation": {
+                "mysql": 80.499,
+                "mongo": 41.091
+            }
+        }
+    },
+    "1m": {
+        "dataset": "/home/amir-khan-421/Research/db-benchmark/data/data_1m.csv",
+        "iterations": 5,
+        "write_latency_ms": {
+            "mysql_write_ms": 35412.688,
+            "mongo_write_ms": 13657.417
+        },
+        "unindexed": {
+            "point_lookup": {
+                "mysql": 496.133,
+                "mongo": 467.205
+            },
+            "aggregation": {
+                "mysql": 592.294,
+                "mongo": 507.202
+            }
+        },
+        "indexed": {
+            "point_lookup": {
+                "mysql": 1.456,
+                "mongo": 3.088
+            },
+            "aggregation": {
+                "mysql": 968.529,
+                "mongo": 269.439
+            }
+        }
+    }
+}

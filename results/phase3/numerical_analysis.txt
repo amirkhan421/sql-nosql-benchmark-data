@@ -1,0 +1,210 @@
+======================================================================
+DATABASE BENCHMARK NUMERICAL ANALYSIS
+======================================================================
+
+1. BULK WRITE PERFORMANCE
+----------------------------------------------------------------------
+
+10K
+MySQL   : 832.416 ms
+MongoDB : 429.521 ms
+MongoDB relative to MySQL: 48.40% lower latency
+
+100K
+MySQL   : 3239.424 ms
+MongoDB : 1082.221 ms
+MongoDB relative to MySQL: 66.59% lower latency
+
+1M
+MySQL   : 29617.741 ms
+MongoDB : 12547.836 ms
+MongoDB relative to MySQL: 57.63% lower latency
+
+
+2. POINT LOOKUP PERFORMANCE
+----------------------------------------------------------------------
+
+10K
+
+MYSQL
+Unindexed  : 9.962 ms
+Indexed    : 0.891 ms
+Warm-cache : 0.671 ms
+Indexed improvement: 91.06%
+Warm-cache improvement: 93.26%
+
+MONGO
+Unindexed  : 11.806 ms
+Indexed    : 1.574 ms
+Warm-cache : 0.812 ms
+Indexed improvement: 86.67%
+Warm-cache improvement: 93.12%
+
+100K
+
+MYSQL
+Unindexed  : 55.262 ms
+Indexed    : 0.725 ms
+Warm-cache : 0.738 ms
+Indexed improvement: 98.69%
+Warm-cache improvement: 98.66%
+
+MONGO
+Unindexed  : 48.104 ms
+Indexed    : 1.119 ms
+Warm-cache : 0.908 ms
+Indexed improvement: 97.67%
+Warm-cache improvement: 98.11%
+
+1M
+
+MYSQL
+Unindexed  : 540.517 ms
+Indexed    : 1.192 ms
+Warm-cache : 1.137 ms
+Indexed improvement: 99.78%
+Warm-cache improvement: 99.79%
+
+MONGO
+Unindexed  : 518.589 ms
+Indexed    : 1.984 ms
+Warm-cache : 1.214 ms
+Indexed improvement: 99.62%
+Warm-cache improvement: 99.77%
+
+
+3. AGGREGATION PERFORMANCE
+----------------------------------------------------------------------
+
+10K
+
+MYSQL
+Unindexed  : 9.903 ms
+Indexed    : 7.468 ms
+Warm-cache : 5.777 ms
+Indexed change: -24.59%
+Warm-cache improvement: 41.66%
+
+MONGO
+Unindexed  : 20.231 ms
+Indexed    : 6.533 ms
+Warm-cache : 4.915 ms
+Indexed change: -67.71%
+Warm-cache improvement: 75.71%
+
+100K
+
+MYSQL
+Unindexed  : 59.744 ms
+Indexed    : 58.983 ms
+Warm-cache : 46.334 ms
+Indexed change: -1.27%
+Warm-cache improvement: 22.45%
+
+MONGO
+Unindexed  : 50.668 ms
+Indexed    : 30.494 ms
+Warm-cache : 32.408 ms
+Indexed change: -39.82%
+Warm-cache improvement: 36.04%
+
+1M
+
+MYSQL
+Unindexed  : 704.294 ms
+Indexed    : 1069.269 ms
+Warm-cache : 733.467 ms
+Indexed change: +51.82%
+Warm-cache improvement: -4.14%
+
+MONGO
+Unindexed  : 590.154 ms
+Indexed    : 304.607 ms
+Warm-cache : 304.103 ms
+Indexed change: -48.39%
+Warm-cache improvement: 48.47%
+
+
+4. MYSQL VS. MONGODB QUERY COMPARISON
+----------------------------------------------------------------------
+
+10K
+
+UNINDEXED
+Point lookup — MongoDB relative to MySQL: -18.51%
+Aggregation — MongoDB relative to MySQL: -104.29%
+
+INDEXED
+Point lookup — MongoDB relative to MySQL: -76.66%
+Aggregation — MongoDB relative to MySQL: +12.52%
+
+WARM_CACHE
+Point lookup — MongoDB relative to MySQL: -21.01%
+Aggregation — MongoDB relative to MySQL: +14.92%
+
+100K
+
+UNINDEXED
+Point lookup — MongoDB relative to MySQL: +12.95%
+Aggregation — MongoDB relative to MySQL: +15.19%
+
+INDEXED
+Point lookup — MongoDB relative to MySQL: -54.34%
+Aggregation — MongoDB relative to MySQL: +48.30%
+
+WARM_CACHE
+Point lookup — MongoDB relative to MySQL: -23.04%
+Aggregation — MongoDB relative to MySQL: +30.06%
+
+1M
+
+UNINDEXED
+Point lookup — MongoDB relative to MySQL: +4.06%
+Aggregation — MongoDB relative to MySQL: +16.21%
+
+INDEXED
+Point lookup — MongoDB relative to MySQL: -66.44%
+Aggregation — MongoDB relative to MySQL: +71.51%
+
+WARM_CACHE
+Point lookup — MongoDB relative to MySQL: -6.77%
+Aggregation — MongoDB relative to MySQL: +58.54%
+
+
+5. SCALING FROM 10K TO 1M
+----------------------------------------------------------------------
+
+MYSQL
+Write latency growth: 3458.05%
+
+UNINDEXED
+Point lookup growth: 5325.79%
+Aggregation growth: 7011.93%
+
+INDEXED
+Point lookup growth: 33.78%
+Aggregation growth: 14218.01%
+
+WARM_CACHE
+Point lookup growth: 69.45%
+Aggregation growth: 12596.33%
+
+MONGO
+Write latency growth: 2821.36%
+
+UNINDEXED
+Point lookup growth: 4292.59%
+Aggregation growth: 2817.08%
+
+INDEXED
+Point lookup growth: 26.05%
+Aggregation growth: 4562.59%
+
+WARM_CACHE
+Point lookup growth: 49.51%
+Aggregation growth: 6087.24%
+
+
+======================================================================
+NUMERICAL ANALYSIS COMPLETED
+======================================================================
