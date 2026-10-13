@@ -90,8 +90,15 @@ For accurate comparisons, record the software versions, hardware configuration, 
 
 ## Research Use
 
-This repository accompanies research comparing SQL and NoSQL database performance. Please cite the associated research paper when referencing these materials. Add the final publication citation and DOI here once available.
+This repository accompanies research evaluating the performance of SQL and NoSQL databases under different indexing and cache conditions. It provides datasets, benchmarking scripts, and experimental results to support reproducibility and further research.
+
+If you use these materials in your research, please cite the associated research paper once its publication details are available.
 
 ## Data Availability
 
-The datasets, scripts, and experimental outputs are provided in this repository. For the persistent archival record, add the Zenodo DOI here once the repository has been archived.
+The datasets, benchmarking scripts, and experimental results associated with this study are available in this repository and archived on Zenodo.
+
+- **Zenodo DOI:** https://doi.org/10.5281/zenodo.23348760
+- **GitHub Repository:** https://github.com/amirkhan421/sql-nosql-benchmark-data
+
+The Zenodo record provides a persistent reference to the archived research materials.
