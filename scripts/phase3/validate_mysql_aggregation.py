@@ -3,11 +3,11 @@ import pymysql
 
 
 DB_CONFIG = {
-    "host": "127.0.0.1",
+    "host": "HOST",
     "port": 3306,
-    "user": "benchmark_user",
-    "password": "BenchmarkDB@2026",
-    "database": "db_benchmark",
+    "user": "USER",
+    "password": "PASSWORD"",
+    "database": "DATABASE",
 }
 
 QUERY = """
