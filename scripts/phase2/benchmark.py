@@ -12,15 +12,15 @@ from bson.decimal128 import Decimal128
 # ============================================================
 
 MYSQL_CONFIG = {
-    "host": "localhost",
-    "user": "benchmark_user",
-    "password": "BenchmarkDB@2026",
-    "database": "db_benchmark",
+    "host": "MYSQL_HOST",
+    "user": "MYSQL_USER",
+    "password": "MYSQL_PASSWORD",
+    "database": "MYSQL_DATABASE",
     "autocommit": True
 }
 
-MONGO_URI = "mongodb://localhost:27017/"
-MONGO_DATABASE = "db_benchmark"
+MONGO_URI = "MONGO_URI"
+MONGO_DATABASE = "MONGO_DATABASE"
 
 
 class BenchmarkSuite:
